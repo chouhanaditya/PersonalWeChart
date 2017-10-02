@@ -5,7 +5,8 @@
     <div class="row">
         <h3 style="text-align: center"><img src="logos\LogoStudent.png" width="4%"> Student Dashboard <img src="logos\LogoStudent.png" width="4%"></h3>
     </div>
-    <div class="row">
+<!-- This button will take the user to a new page where new patient's demographic will be entered -->    
+<div class="row">
         <div class="col-md-10 col-md-offset-1">
     <a id="addPatient" href="{{url('/add_patient')}}" class="btn btn-primary" style="float: right">
         <i class="fa fa-plus-circle" aria-hidden="true"></i>
