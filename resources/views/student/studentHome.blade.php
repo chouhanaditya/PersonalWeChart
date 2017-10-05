@@ -27,7 +27,7 @@
                 <div class="panel-body" style="height: 220px; overflow-y: scroll">
                     <div class="panel panel-default">
                         <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
-                            <h4 style="margin-top: 0">Module 1</h4>
+                            <h4 id="savedModuleName" style="margin-top: 0">Module 1</h4>
                         </div>
                         <div class="panel-body" style="height: 220px; overflow-y: scroll">
                             <table class="table table-striped table-bordered table-hover">
@@ -43,15 +43,15 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><p>Name</p></td>
-                                    <td><p>27</p></td>
-                                    <td> <p>Male</p></td>
-                                    <td> <p>6'10</p></td>
-                                    <td> <p>150</p></td>
+                                    <td><p id="patientName">Name</p></td>
+                                    <td><p id="patientAge">27</p></td>
+                                    <td><p id="patientSex">Male</p></td>
+                                    <td><p id="patientHeight">6'10</p></td>
+                                    <td><p id="patientWeight">150</p></td>
                                     <td style="text-align: left">
-                                        <a href=""> Edit</a>
-                                        <a href=""> Delete</a>
-                                        <a href=""> View</a>
+                                        <a id="edit" href=""> Edit</a>
+                                        <a id="delete" href=""> Delete</a>
+                                        <a id="view" href=""> View</a>
                                     </td>
                                 </tr>
                                 </tbody>
@@ -59,7 +59,6 @@
                         </div>
                     </div>
                 </div>
-
                 <br>
             </div>
         </div>
@@ -75,7 +74,7 @@
                 <div class="panel-body" style="height: 220px; overflow-y: scroll">
                     <div class="panel panel-default">
                         <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
-                            <h4 style="margin-top: 0">Module 1</h4>
+                            <h4 id="submittedModuleName" style="margin-top: 0">Module 1</h4>
                         </div>
                         <div class="panel-body" style="height: 220px; overflow-y: scroll">
                             <table class="table table-striped table-bordered table-hover">
@@ -91,15 +90,15 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td><p>Name</p></td>
-                                    <td><p>27</p></td>
-                                    <td> <p>Male</p></td>
-                                    <td> <p>6'10</p></td>
-                                    <td> <p>150</p></td>
+                                    <td><p id="patientName">Name</p></td>
+                                    <td><p id="patientAge">27</p></td>
+                                    <td><p id="patientSex">Male</p></td>
+                                    <td><p id="patientHeight">6'10</p></td>
+                                    <td><p id="patientWeight">150</p></td>
                                     <td style="text-align: left">
-                                        <a href=""> Edit</a>
-                                        <a href=""> Delete</a>
-                                        <a href=""> View</a>
+                                        <a id="edit" href=""> Edit</a>
+                                        <a id="delete" href=""> Delete</a>
+                                        <a id="view" href=""> View</a>
                                     </td>
                                 </tr>
                                 </tbody>
