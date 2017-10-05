@@ -7,22 +7,22 @@
     </div>
 
     <div class="row">
-            <div class="col-md-2 col-md-offset-1">   
-                <a href="{{url('/ManageEmails')}}" class="btn btn-success"> 
+            <div class="col-md-2 col-md-offset-1">
+                <a href="{{url('/ManageEmails')}}" class="btn btn-success">
                 <i class="fa fa-envelope-o" aria-hidden="true"></i> Manage Emails</a>
             </div>
-            <div class="col-md-8">   
-                <a class="btn btn-success" style="float: right"> 
+            <div class="col-md-8">
+                <a class="btn btn-success" style="float: right">
                 <i class="fa fa-cog" aria-hidden="true"></i> Configure Modules</a>
             </div>
     </div>
     <br>
     <!-- Students -->
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">        
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
-                    <h4 style="margin-top: 0">Students</h4>                
+                    <h4 style="margin-top: 0">Students</h4>
                 </div>
 
                 <div class="panel-body" style="height: 220px; overflow-y: scroll">
@@ -43,8 +43,41 @@
                                     <td><p><?php echo ($student->email); ?></p></td>
                                     <td> <p><?php echo ($student->contactno); ?></p></td>
                                     <td style="text-align: right">
-                                        <a href="" style="margin:auto; text-align:center; display:block;" class="btn btn-danger btn-sm" style="float: right">
-                                            <i class="fa fa-minus-circle" aria-hidden="true"> Delete</a></i>
+                                        <div class="modal fade" id="confirm_delete_student" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header" style="text-align:center">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+                                                    </div>
+
+                                                    <div class="modal-body" style="text-align:center">
+                                                        <p>You are about to delete this student, this procedure is irreversible.</p>
+                                                        <p>Are you certain that you wish to proceed?</p>
+                                                        <p class="debug-url"></p>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                        <a class="btn btn-danger btn-ok">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="" style="margin:auto;  text-align:center; display:block;" class="btn btn-danger btn-sm" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm_delete_student">
+                                            <i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></a>
+                                        </button>
+
+                                        <script>
+                                            $('#confirm_delete_student').on('show.bs.modal', function(e) {
+                                                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+
+                                                $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+                                            });
+                                        </script>
+
                                     </td>
                                 </tr>
                             @endforeach
@@ -61,10 +94,10 @@
 <br>
       <!-- Instructors -->
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">        
+        <div class="col-md-10 col-md-offset-1">
             <div class="panel panel-default">
                 <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
-                    <h4 style="margin-top: 0">Instructors</h4>                
+                    <h4 style="margin-top: 0">Instructors</h4>
                 </div>
 
                 <div class="panel-body" style="height: 220px; overflow-y: scroll">
@@ -74,7 +107,7 @@
                             <th>Name</th>
                             <th><i class="fa fa-envelope-o" aria-hidden="true"></i> Email Address</th>
                             <th><i class="fa fa-phone" aria-hidden="true"></i> Contact Number</th>
-                            <th><i class="fa fa-newspaper-o" aria-hidden="true"></i> Department Name</th>                            
+                            <th><i class="fa fa-newspaper-o" aria-hidden="true"></i> Department Name</th>
                             <th colspan="2">Action</th>
                         </tr>
                         </thead>
@@ -87,13 +120,45 @@
                                     <td> <p><?php echo ($instructor->contactno); ?></p></td>
                                     <td> <p><?php echo ($instructor->departmentName ); ?></p></td>
                                     <td style="text-align: right">
-                                        <p style="text-align:center"><a href="" style="margin:auto; text-align:center; display:block;" class="btn btn-danger btn-sm" style="float: right">
-                                                <i class="fa fa-minus-circle" aria-hidden="true"> Delete</a></i>
+                                        <div class="modal fade" id="confirm_delete_instructor" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                            <div class="modal-dialog">
+                                                <div class="modal-content">
+
+                                                    <div class="modal-header" style="text-align:center">
+                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
+                                                    </div>
+
+                                                    <div class="modal-body" style="text-align:center">
+                                                        <p>You are about to delete this instructor, this procedure is irreversible.</p>
+                                                        <p>Are you certain that you wish to proceed?</p>
+                                                        <p class="debug-url"></p>
+                                                    </div>
+
+                                                    <div class="modal-footer">
+                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                        <a class="btn btn-danger btn-ok">Delete</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <a href="" style="margin:auto;  text-align:center; display:block;" class="btn btn-danger btn-sm" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm_delete_instructor">
+                                            <i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></a>
+                                        </button>
+
+                                        <script>
+                                            $('#confirm_delete_instructor').on('show.bs.modal', function(e) {
+                                                $(this).find('.btn-ok').attr('href', $(e.relatedTarget).data('href'));
+
+                                                $('.debug-url').html('Delete URL: <strong>' + $(this).find('.btn-ok').attr('href') + '</strong>');
+                                            });
+                                        </script>
                                     </td>
                                 </tr>
                             @endforeach
                         </tbody>
-                    </table>    
+                    </table>
                 </div>
                 <br>
                 <a id="addInstructorEmails" href="{{url('/AddInstructorEmails')}}" class="btn btn-primary" style="float: right">
@@ -103,6 +168,6 @@
             </div>
         </div>
     </div>
-  
+
 </div>
 @endsection
