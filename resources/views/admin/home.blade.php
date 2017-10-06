@@ -48,7 +48,7 @@
                                                 <div class="modal-content">
 
                                                     <div class="modal-header" style="text-align:center">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <button type="button" id="student_delete_button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                         <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
                                                     </div>
 
@@ -59,8 +59,8 @@
                                                     </div>
 
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                        <a class="btn btn-danger btn-ok">Delete</a>
+                                                        <button type="button" id="student_delete_cancel_button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                        <button type="button"  id="student_delete_confirm_button" class="btn btn-danger btn-ok">Delete</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -125,7 +125,7 @@
                                                 <div class="modal-content">
 
                                                     <div class="modal-header" style="text-align:center">
-                                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                                                        <button type="button" id="instructor_delete_button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                                                         <h4 class="modal-title" id="myModalLabel">Confirm Delete</h4>
                                                     </div>
 
@@ -136,8 +136,8 @@
                                                     </div>
 
                                                     <div class="modal-footer">
-                                                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-                                                        <a class="btn btn-danger btn-ok">Delete</a>
+                                                        <button type="button" id="instructor_delete_cancel_button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                                                        <button type="button" id="instructor_delete_confirm_button" class="btn btn-danger btn-ok">Delete</button>
                                                     </div>
                                                 </div>
                                             </div>
