@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 use App\module;
+use App\patient_record_status;
+use App\users_patient;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\Http\Request;
 use App\patient;
@@ -11,9 +14,10 @@ class StudentController extends Controller
 {
     public function index()
     {
-//         $patients = DB::table('users')->where('role','Student')->get();
-         //$instructors = DB::table('users')->where('role','Instructor')->get();
-        return view('student/studentHome');
+//
+        $patients = patient::where('created_by', Auth::user()->id)->get();
+//        var_dump($patients);
+        return view('student/studentHome', compact('patients'));
     }
     public function get_add_patient()
     {
@@ -42,12 +46,22 @@ class StudentController extends Controller
         }
         $patient['last_name'] = 'Doe'.$append_number;
 
-        $patient['is_archived'] = 0;
-        $patient['patient_record_status_id'] = 1;
-
+        $patient['archived'] = 0;
+        $patient['created_by'] = $request['user_id'];
+        $patient['weight'] = 0;
         $patient->save();
-        $modules = module::where('archived',0)->get();
-        return view('patient/add_patient','modules','append_number');
 
+
+        $user_patient = new users_patient();
+        $user_patient->patient_record_status_id = 2;
+        $user_patient->patient_id = $patient->id;
+        $user_patient->user_id = $request['user_id'];
+        $user_patient->created_by = $request['user_id'];
+        $user_patient->save();
+
+        $patients = patient::all();
+
+        return view('student/studentHome', compact('patients','append_number'));
     }
+
 }
