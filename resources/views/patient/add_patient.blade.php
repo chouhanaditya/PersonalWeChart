@@ -39,7 +39,7 @@
                                         <div class="col-md-6">
                                             <select class="form-control" name="module_id" value="{{ old('module_id') }}">
                                                 @foreach ($modules as $module)
-                                                    <option value="{{ $module->module_id }}">
+                                                    <option value="{{ $module->id }}">
                                                         {{ $module->module_name}}
                                                     </option>
                                                 @endforeach
@@ -91,6 +91,7 @@
                                             @endif
                                         </div>
                                     </div>
+                                            <input type=hidden name="user_id" value="{{ Auth::user()->id }}">
 
                                     <br>
                                     <br>
