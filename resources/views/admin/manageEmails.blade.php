@@ -62,9 +62,8 @@
                                                         </div>
                                                     </div>
 
-                                                    <a href="" style="margin:auto;  text-align:center; display:block;" class="btn btn-danger btn-sm" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm_delete_student">
-                                                        <i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></a>
-                                                    </button>
+                                                    <button type="button" id="student_minus_delete" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-danger btn-sm" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm_delete_student">
+                                                        <i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></button>
 
                                                     <script>
                                                         $('#confirm_delete_student').on('show.bs.modal', function(e) {
@@ -131,9 +130,8 @@
                                                         </div>
                                                     </div>
 
-                                                    <a href="" style="margin:auto;  text-align:center; display:block;" class="btn btn-danger btn-sm" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm_delete_instructor">
-                                                        <i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></a>
-                                                    </button>
+                                                    <button type="button" id="instructor_minus_delete" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-danger btn-sm" data-href="/delete.php?id=54" data-toggle="modal" data-target="#confirm_delete_instructor">
+                                                        <i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></button>
 
                                                     <script>
                                                         $('#confirm_delete_instructor').on('show.bs.modal', function(e) {
