@@ -35,7 +35,7 @@
                                 @endfor
 
                                 @if ($counter != '1')
-                                 <div class="col-md-4" style="float:right">
+                                 <div class="col-md-8" style="text-align:right">
                                     <a type="button" href="{{url('RemoveInstructorEmails')}}">
                                         <i class="fa fa-minus-circle" aria-hidden="true"></i> Remove row
                                     </a>
