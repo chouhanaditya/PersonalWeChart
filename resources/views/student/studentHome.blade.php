@@ -1,3 +1,8 @@
+<!--
+ Developer - Varun Parihar, Siddharth Karlekar & Harsha Verma
+ Date - 10/06/2017
+ Description - View for Student Dashboard.
+-->
 @extends('layouts.app')
 
 @section('content')
@@ -23,44 +28,56 @@
                     <h4 style="margin-top: 0">Saved</h4>
                 </div>
                 <div class="panel-body" style="height: 220px; overflow-y: scroll">
-                    @if($patients)
-                        <?php foreach($patients as $patient) { ?>
-                            @if($patient->status === 1)
-                                <div class="panel panel-default">
-                                    <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
-                                        <h4 id="savedModuleName" style="margin-top: 0">{{$patient->module->module_name}}</h4>
-                                    </div>
-                                    <div class="panel-body" style="height: 220px; overflow-y: scroll">
-                                        <table class="table table-striped table-bordered table-hover">
-                                            <thead>
-                                            <tr class="bg-info">
-                                                <th>Patient Name</th>
-                                                <th>Age</th>
-                                                <th>Sex</th>
-                                                <th>Height</th>
-                                                <th>Weight</th>
-                                                <th colspan="2">Action</th>
-                                            </tr>
-                                            </thead>
-                                            <tbody>
-                                            <tr>
-                                                <td><a href="route(/student/{{$patient->patient_id}})" id="patientName"><?php echo $patient->first_name.' '.$patient->last_name; ?></a></td>
-                                                <td><p id="patientAge">{{$patient->age}}</p></td>
-                                                <td><p id="patientSex">{{$patient->gender}}</p></td>
-                                                <td><p id="patientHeight">{{$patient->height}}</p></td>
-                                                <td><p id="patientWeight">{{$patient->weight}}</p></td>
-                                                <td style="text-align: left">
-                                                    <a id="edit" href=""> Edit</a>
-                                                    <a id="delete" href=""> Delete</a>
-                                                    <a id="view" href=""> View</a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
+                    @if($modules)
+                        @foreach($modules as $module)
+                            <div class="panel panel-default">
+                                <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
+                                    <h4 id="savedModuleName" style="margin-top: 0">{{$module}}</h4>
                                 </div>
-                            @endif
-                        <?php } ?>
+
+                                <div class="panel-body" style="height: 220px; overflow-y: scroll">
+                                @if($patients)
+                                    @foreach($patients as $patient)
+                                        <!-- To check the patient records with "Saved" status -->
+                                            @if($patient->module)
+                                                @if($patient->status === 1 && $patient->module->module_name === $module && $patient->archived === 0)
+                                                    <table class="table table-striped table-bordered table-hover">
+                                                        <thead>
+                                                        <tr class="bg-info">
+                                                            <th>Patient Name</th>
+                                                            <th>Age</th>
+                                                            <th>Sex</th>
+                                                            <th>Height</th>
+                                                            <th>Weight</th>
+                                                            <th>Visit Date</th>
+                                                            <th colspan="2">Action</th>
+                                                        </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td><a href="{{ route( 'patient.view', ['patient_id' => $patient->patient_id ] ) }}" id="patientName"><?php echo $patient->first_name.' '.$patient->last_name; ?></a></td>
+                                                                <td><p id="patientAge">{{$patient->age}}</p></td>
+                                                                <td><p id="patientSex">{{$patient->gender}}</p></td>
+                                                                <td><p id="patientHeight">{{$patient->height}}</p></td>
+                                                                <td><p id="patientWeight">{{$patient->weight}}</p></td>
+                                                                <td><p id="visitDate">{{$patient->visit_date}}</p></td>
+                                                                <td style="text-align: left">
+                                                                    <a id="edit" href="{{  route('patient.edit', ['id' => $patient->patient_id]) }}"> Edit</a>
+                                                                    <a id="delete" href="{{ route('patient.destroy', ['patient_id' => $patient->patient_id ]) }}"> Delete</a>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+
+                                                @endif
+                                            @endif
+                                        @endforeach
+                                    @endif
+                                </div>
+                            </div>
+                        @endforeach
+                    @else
+                        {{$message}}
                     @endif
                 </div>
                 <br>
@@ -75,7 +92,7 @@
                 <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
                     <h4 style="margin-top: 0">Submitted</h4>
                 </div>
-                <div class="panel-body" style="height: 220px; overflow-y: scroll">
+                {{--<div class="panel-body" style="height: 220px; overflow-y: scroll">
                     <div class="panel panel-default">
                         <div class="panel-heading" style="background-color: grey; padding-bottom: 0">
                             <h4 id="submittedModuleName" style="margin-top: 0">Module 1</h4>
@@ -102,13 +119,12 @@
                                     <td style="text-align: left">
                                         <a id="edit" href=""> Edit</a>
                                         <a id="delete" href=""> Delete</a>
-                                        <a id="view" href=""> View</a>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>
+                    </div>--}}
                 </div>
 
                 <br>
