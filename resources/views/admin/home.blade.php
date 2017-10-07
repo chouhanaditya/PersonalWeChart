@@ -9,7 +9,11 @@
     <div class="row">
             <div class="col-md-2 col-md-offset-1">
                 <a href="{{url('/ManageEmails')}}" class="btn btn-success">
+<<<<<<< HEAD
+                <i class="fa fa-envelope-o" aria-hidden="true"></i> Remove Emails</a>
+=======
                 <i class="fa fa-envelope-o" aria-hidden="true"></i> Manage Emails</a>
+>>>>>>> origin/Sprint2Development
             </div>
             <div class="col-md-8">
                 <a class="btn btn-success" style="float: right">
@@ -59,8 +63,13 @@
                                                     </div>
 
                                                     <div class="modal-footer">
+<<<<<<< HEAD
+                                                        <p><button type="button" id="student_delete_cancel_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true">  Cancel</i></button></p>
+                                                            <button type="button"  id="student_delete_confirm_button"  style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-danger btn-ok"><i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></button>
+=======
                                                         <button type="button" id="student_delete_cancel_button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                                         <button type="button"  id="student_delete_confirm_button" class="btn btn-danger btn-ok">Delete</button>
+>>>>>>> origin/Sprint2Development
                                                     </div>
                                                 </div>
                                             </div>
@@ -83,11 +92,11 @@
                         </tbody>
                     </table>
                 </div>
-                <br>
+            </div>
                 <a id="addStudentEmails" href="{{url('/AddStudentEmails')}}" class="btn btn-primary" style="float: right">
                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     Add Student Email Address</a>
-            </div>
+
         </div>
     </div>
 <br>
@@ -135,8 +144,13 @@
                                                     </div>
 
                                                     <div class="modal-footer">
+<<<<<<< HEAD
+                                                        <p><button type="button" id="instructor_delete_cancel_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true">  Cancel</i></button></p>
+                                                        <button type="button" id="instructor_delete_confirm_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-danger btn-ok"><i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></button>
+=======
                                                         <button type="button" id="instructor_delete_cancel_button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                                         <button type="button" id="instructor_delete_confirm_button" class="btn btn-danger btn-ok">Delete</button>
+>>>>>>> origin/Sprint2Development
                                                     </div>
                                                 </div>
                                             </div>
@@ -158,14 +172,18 @@
                         </tbody>
                     </table>
                 </div>
-                <br>
+            </div>
                 <a id="addInstructorEmails" href="{{url('/AddInstructorEmails')}}" class="btn btn-primary" style="float: right">
                     <i class="fa fa-plus-circle" aria-hidden="true"></i>
                     Add Instructor Email Address</a>
 
-            </div>
+
         </div>
     </div>
+<<<<<<< HEAD
+<br>
+=======
 
+>>>>>>> origin/Sprint2Development
 </div>
 @endsection

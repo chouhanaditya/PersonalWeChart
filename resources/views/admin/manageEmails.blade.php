@@ -3,7 +3,11 @@
 @section('content')
 <div class="container">
     <div class="row">
+<<<<<<< HEAD
+        <h3 align="center">Remove Emails</h3>
+=======
         <h3 align="center">Manage Emails</h3>
+>>>>>>> origin/Sprint2Development
     </div>
     <div class="row">
         <div class="col-md-2 col-md-offset-1">
@@ -54,10 +58,29 @@
                                                                     <p class="debug-url"></p>
                                                                 </div>
 
+<<<<<<< HEAD
+                                            <div class="modal-footer">
+                                                <p><button type="button" id="student_delete_cancel_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true">  Cancel</i></button></p>
+
+                                                                    <form method="post" action="ManageEmails/{{ $email->id }}">
+                                                                        {{ method_field('DELETE') }}
+
+                                                                            <input type="hidden" name="_token" value="{{ csrf_token() }}">
+
+                                                                                <div class="form-group">
+                                                                                    <button type="submit" id="student_delete_confirm_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-danger btn-ok"><i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></button>
+                                                                            </div>
+
+                                                                    </form>
+
+                                                                </div>
+
+=======
                                                                 <div class="modal-footer">
                                                                     <button type="button" id="student_delete_cancel_button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                                                     <button type="button" id="student_delete_confirm_button" class="btn btn-danger btn-ok">Delete</button>
                                                                 </div>
+>>>>>>> origin/Sprint2Development
                                                             </div>
                                                         </div>
                                                     </div>
@@ -73,6 +96,11 @@
                                                         });
                                                     </script>
                                     </td>
+                                                {{--<td>--}}
+                                                   {{--{{Form::open([ 'method'  => 'delete', 'route' => [ 'AdminController.destroy', $email->id ] ])}}--}}
+                                                    {{--{{ Form::submit('Delete', ['class' => 'btn btn-danger']) }}--}}
+                                                    {{--{!! Form::close() !!}--}}
+                                                {{--</td>--}}
                                             </tr>
                                             @endforeach
                                     </tbody>
@@ -123,8 +151,22 @@
                                                                 </div>
 
                                                                 <div class="modal-footer">
+<<<<<<< HEAD
+                                                                    <p><button type="button" id="instructor_delete_cancel_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times" aria-hidden="true">  Cancel</i></button></p>
+                                                                    <form method="post" action="ManageEmails/{{ $email->id }}">
+                                                                        {{ method_field('DELETE') }}
+
+                                                                        <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                                                                        <div class="form-group">
+                                                                            <button type="submit" id="instructor_delete_confirm_button" style="margin:auto;  text-align:center; display:block; width:100%;" class="btn btn-danger btn-ok"><i class="fa fa-minus-circle" aria-hidden="true"> Delete</i></button>
+                                                                        </div>
+
+                                                                    </form>
+
+=======
                                                                     <button type="button" id="instructor_delete_cancel_button" class="btn btn-default" data-dismiss="modal">Cancel</button>
                                                                     <button type="button" id="instructor_delete_confirm_button" class="btn btn-danger btn-ok">Delete</button>
+>>>>>>> origin/Sprint2Development
                                                                 </div>
                                                             </div>
                                                         </div>
