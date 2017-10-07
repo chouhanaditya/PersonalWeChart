@@ -43,7 +43,31 @@ Route::get('/ManageEmails', 'AdminController@getManageEmails');
 
 //Student routes
 
+<<<<<<< HEAD
+=======
 //Landing page for Student
+Route::get('/StudentHome', 'StudentController@index')->name('student.home');
+Route::get('/PatientView/{patient_id}', 'StudentController@view')->name('patient.view');
+Route::get('/PatientEdit/{id}', 'StudentController@edit')->name('patient.edit');
+Route::get('/PatientDelete/{id}', 'StudentController@destroy')->name('patient.destroy');
+Route::post('/patient/{patient_id}', 'StudentController@store')->name('patient.store');
+
+//Patient routes
+//Add new patient
+Route::get('/add_patient', 'StudentController@get_add_patient');
+Route::post('add_patient', 'StudentController@post_add_patient');
+
+>>>>>>> origin/Sprint2Development
+
+//Landing page for Instructor
+Route::get('/InstructorHome', 'InstructorController@index');
+
+//ADmin Delete a user from manage email page
+Route::any('ManageEmails/{id}', 'AdminController@delete');
+
+
+//Landing page for Student
+//Varun Parihar
 Route::get('/StudentHome', 'StudentController@index')->name('student.home');
 Route::get('/PatientView/{patient_id}', 'StudentController@view')->name('patient.view');
 Route::get('/PatientEdit/{id}', 'StudentController@edit')->name('patient.edit');
@@ -58,7 +82,3 @@ Route::post('add_patient', 'StudentController@post_add_patient');
 
 //Landing page for Instructor
 Route::get('/InstructorHome', 'InstructorController@index');
-
-
-
-
