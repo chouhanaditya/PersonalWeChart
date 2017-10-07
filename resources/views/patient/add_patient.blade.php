@@ -22,7 +22,7 @@
                                         <label for="gender" class="col-md-4 control-label">Sex*</label>
 
                                         <div class="col-md-6">
-                                            <input type="radio" class="form-check-input inline" name="gender" value="Male" id="genderMale" checked="checked">&nbsp;Male
+                                            <input type="radio" class="form-check-input inline" name="gender" value="Male" id="genderMale" checked>&nbsp;Male
                                             &nbsp;&nbsp;&nbsp;&nbsp;
                                             <input type="radio" class="form-check-input inline" name="gender" value="Female" id="genderFemale">&nbsp;Female
                                             @if ($errors->has('gender'))
@@ -39,7 +39,7 @@
                                         <div class="col-md-6">
                                             <select class="form-control" name="module_id" value="{{ old('module_id') }}">
                                                 @foreach ($modules as $module)
-                                                    <option value="{{ $module->id }}">
+                                                    <option value="{{ $module->module_id }}">
                                                         {{ $module->module_name}}
                                                     </option>
                                                 @endforeach
