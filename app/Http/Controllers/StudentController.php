@@ -14,20 +14,85 @@ class StudentController extends Controller
 {
     public function index()
     {
-//
+        $modules = array();
+        $message = '';
         $patients = patient::where('created_by', Auth::user()->id)->get();
-//        var_dump($patients);
-        return view('student/studentHome', compact('patients'));
+        foreach($patients as $patient){;
+            if($patient->module) {
+                array_push($modules, $patient->module->module_name);
+            }else{
+                $message = 'There is no patient record associated with this student.';
+            }
+        }
+        $modules = array_unique($modules);
+        return view('student/studentHome', compact('patients', 'modules', 'message'));
     }
+
     public function get_add_patient()
     {
         $modules = module::where('archived',0)->get();
         $append_number='';
         return view('patient/add_patient',compact('modules','append_number'));
     }
+
+    public function edit(Request $request){
+        $patient = patient::where('patient_id', $request['id'])->first();
+        return view('/patient/edit_patient', compact('patient'));
+    }
+
+    public function view(Request $request){
+        $patient = patient::where('patient_id', $request['patient_id'])->first();
+        return view('/patient/view_patient', compact('patient'));
+    }
+
+    public function destroy(Request $request){
+        $modules = array();
+        $patient = patient::where('patient_id', $request['patient_id'])->update([
+            'archived' => true
+        ]);
+
+        $patients = patient::where('created_by', Auth::user()->id)->get();
+        foreach($patients as $patient){
+            if($patient->module) {
+                array_push($modules, $patient->module->module_name);
+            }else{
+                $message = 'There is no patient record associated with this student.';
+            }
+        }
+        $modules = array_unique($modules);
+        return view('student/studentHome', compact('patients', 'modules', 'message'));
+    }
+
+    public function store(Request $request){
+
+        $modules = array();
+        $message = '';
+        $patient = patient::where('patient_id', $request['patient_id'])->update([
+            'first_name' => $request['gender'] === 'Male' ? 'John' : 'Jane',
+            'age' => $request['age'],
+            'gender' => $request['gender'],
+            'height' => $request['height'],
+            'weight' => $request['weight']
+        ]);
+
+        $patients = patient::where('created_by', Auth::user()->id)->get();
+        foreach($patients as $patient){
+            if($patient->module) {
+                array_push($modules, $patient->module->module_name);
+            }else{
+                $message = 'There is no patient record associated with this student.';
+            }
+        }
+        $modules = array_unique($modules);
+        return view('student/studentHome', compact('patients', 'modules', 'message'));
+
+    }
+
     public function post_add_patient(Request $request)
     {
         $patient = new patient($request->all());
+        $modules = array();
+        $message = '';
 
         //Fetching last inserted patient_id to generate Patient name
         $last_patient = patient::max('patient_id');
@@ -37,7 +102,7 @@ class StudentController extends Controller
             $append_number = $last_patient + 1;
 
         //if sex is male then first name is John else Jane
-        if($request['sex'] == 'Male') {
+        if($request['gender'] == 'Male') {
             $patient['first_name'] = 'John';
         }
         else
@@ -53,15 +118,22 @@ class StudentController extends Controller
 
 
         $user_patient = new users_patient();
-        $user_patient->patient_record_status_id = 2;
+        $user_patient->patient_record_status_id = 1;
         $user_patient->patient_id = $patient->id;
         $user_patient->user_id = $request['user_id'];
         $user_patient->created_by = $request['user_id'];
         $user_patient->save();
 
-        $patients = patient::all();
-
-        return view('student/studentHome', compact('patients','append_number'));
+        $patients = patient::where('created_by', Auth::user()->id)->get();
+        foreach($patients as $patient) {
+            if($patient->module) {
+                array_push($modules, $patient->module);
+            }else {
+                $message = 'There is no patient record associated with this student.';
+            }
+        }
+        $modules = array_unique($modules);
+        return view('student/studentHome', compact('patients','append_number', 'modules', 'message'));
     }
 
 }
