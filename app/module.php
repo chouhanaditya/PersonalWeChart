@@ -24,4 +24,5 @@ class module extends Authenticatable
     }
 
     protected $table = 'module';
+    protected $primaryKey = 'module_id';
 }
