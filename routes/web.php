@@ -44,7 +44,11 @@ Route::get('/ManageEmails', 'AdminController@getManageEmails');
 //Student routes
 
 //Landing page for Student
-Route::get('/StudentHome', 'StudentController@index');
+Route::get('/StudentHome', 'StudentController@index')->name('student.home');
+Route::get('/PatientView/{patient_id}', 'StudentController@view')->name('patient.view');
+Route::get('/PatientEdit/{id}', 'StudentController@edit')->name('patient.edit');
+Route::get('/PatientDelete/{id}', 'StudentController@destroy')->name('patient.destroy');
+Route::post('/patient/{patient_id}', 'StudentController@store')->name('patient.store');
 
 //Patient routes
 //Add new patient
