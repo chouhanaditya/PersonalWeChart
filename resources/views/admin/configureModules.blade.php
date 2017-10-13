@@ -32,15 +32,15 @@
                 <tr>
                     <td style="background-color:#5DADE2;width:200px ">
                         <h5 style="margin-left: 1%;margin-right: 1%">
-                        Module/Navigations
+                        <b>Module/Navigations</b>
                         </h5>
                     </td>
                     <td style="background-color:#5DADE2; width: 150px" align="middle">
-                        <h5 style="padding-left: 1%;padding-right: 1%">Demographics</h5>
+                        <h5 style="padding-left: 1%;padding-right: 1%"><b>Demographics</b></h5>
                     </td>
                     @foreach ($navs as $nav)
                         <td  style="background-color:#5DADE2;width: 300px"  align="middle">
-                            <h5 style="padding-left: 1%;padding-right: 1%">{{ $nav->navigation_name }}</h5>
+                            <h5 style="padding-left: 1%;padding-right: 1%"><b>{{ $nav->navigation_name }}</b></h5>
                         </td>
                     @endforeach
                     <td>
