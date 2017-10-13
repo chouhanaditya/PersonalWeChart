@@ -28,27 +28,42 @@
         </div>
         <br>
         <br>
-            <table border="2">
-                <td>Module/Navigations</td>
-                @foreach ($navs as $nav)
-                    <td>
-                        {{ $nav->navigation_name }}
+            <table border="2" style="overflow-x: scroll">
+                <tr>
+                    <td style="background-color:#5DADE2;width:200px ">
+                        <h5 style="margin-left: 1%;margin-right: 1%">
+                        Module/Navigations
+                        </h5>
                     </td>
-                @endforeach
-                <td>
-                    Action
-                </td>
+                    <td style="background-color:#5DADE2; width: 150px" align="middle">
+                        <h5 style="padding-left: 1%;padding-right: 1%">Demographics</h5>
+                    </td>
+                    @foreach ($navs as $nav)
+                        <td  style="background-color:#5DADE2;width: 300px"  align="middle">
+                            <h5 style="padding-left: 1%;padding-right: 1%">{{ $nav->navigation_name }}</h5>
+                        </td>
+                    @endforeach
+                    <td>
+
+                    </td>
                 </tr>
                 @if($mods->isEmpty())
-                    <tr id="onetimedisplay"><td colspan = "12" height="100" align = "center">There are no active modules.<br> Please click the "Add Module" button to add module.</td></tr>
+                    <tr id="onetimedisplay"><td colspan = "12" height="100" align = "center">
+                        <td>
+                            There are no active modules.<br> Please click the "Add Module" button to add module.
+                        </td>
+                    </tr>
                 @else
                 @foreach ($mods as $mod)
                     <tr>
-                        <td>
+                        <td align="middle">
                             {{ $mod->module_name }}
                         </td>
+                        <td align="middle">
+                            <input type="checkbox" checked onclick="return false">
+                        </td>
                         @foreach ($navs as $nav)
-                            <td>
+                            <td align="middle">
                                 <?php $check = 0; ?>
                                 @foreach($navs_mods as $nm)
                                     @if($nm->module_id == $mod->module_id && $nm->navigation_id == $nav->navigation_id && $nm->visible ==1)
@@ -78,7 +93,8 @@
                 @endforeach
                 @endif
             </table>
-        <br><br>
+        <br>
+        <br>
 
         {{ Form::open(array('method' => 'post', 'route' => array('submitmodule'))) }}
         <table border="2" id="childTable">
@@ -89,7 +105,7 @@
                     </td>
                 @endforeach
                 <td>
-                    Action
+
                 </td>
             </tr>
            <tr>
