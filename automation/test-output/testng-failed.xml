@@ -3,11 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="Tests.LoginTests">
+      <class name="Tests.RegisterPageTesting">
         <methods>
-          <include name="DataDrivenTests"/>
+          <include name="AssignValues" invocation-numbers="3 4 5 6 7 8"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- Tests.LoginTests -->
+      </class> <!-- Tests.RegisterPageTesting -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

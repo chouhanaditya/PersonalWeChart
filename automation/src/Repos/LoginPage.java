@@ -25,19 +25,19 @@ public class LoginPage extends BasePage {
 		return driver.findElement(By.cssSelector("button[type='submit']"));
 	}
 	
-	public void LoginAsStudent(WebDriver driver) {
-		LoginPage.UserName(driver).sendKeys("");
-		LoginPage.Password(driver).sendKeys("");
+	public static void LoginAsStudent(WebDriver driver) {
+		LoginPage.UserName(driver).sendKeys("harsha@gmail.com");
+		LoginPage.Password(driver).sendKeys("aaaaaa");
 		LoginPage.Submit(driver).click();
 	}
 	
-	public void LoginAsAdmin(WebDriver driver) {
-		LoginPage.UserName(driver).sendKeys("");
-		LoginPage.Password(driver).sendKeys("");
+	public static void LoginAsAdmin(WebDriver driver) {
+		LoginPage.UserName(driver).sendKeys("Admin@wechart.com");
+		LoginPage.Password(driver).sendKeys("wechartadmin");
 		LoginPage.Submit(driver).click();
 	}
 	
-	public void LoginAsInstructor(WebDriver driver) {
+	public static void LoginAsInstructor(WebDriver driver) {
 		LoginPage.UserName(driver).sendKeys("");
 		LoginPage.Password(driver).sendKeys("");
 		LoginPage.Submit(driver).click();
