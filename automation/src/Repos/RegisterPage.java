@@ -6,18 +6,20 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.Select;
 
-public class RegisterPage extends BasePage {
+public class RegisterPage extends BasePage  {
 
-	public RegisterPage() {
-		super("");
-
+	
+	private static String Url = "register";
+	
+	public static void GoToPage(WebDriver driver) {
+		BasePage.GoToPageUrl(driver, Url);
 	}
 	public static WebElement Email(WebDriver driver) {
 		return driver.findElement(By.id("email"));
 	}
 	public static WebElement Password(WebDriver driver) {
 		return driver.findElement(By.id("password"));
-	}
+	} 
 	public static WebElement PasswordConfirm(WebDriver driver) {
 		return driver.findElement(By.id("password-confirm"));
 	}
@@ -60,6 +62,63 @@ public class RegisterPage extends BasePage {
 	public static WebElement Submit(WebDriver driver) {
 		return driver.findElement(By.xpath("//button[@type='submit']"));
 	}
+	public static WebElement Messages(WebDriver driver)
+	{
+		return driver.findElement(By.className("help-block"));
+	}
+	public static WebElement EmailIdALert(WebDriver driver)
+	{
+		return driver.findElement(By.id("emailidalert"));
+	}
+	public static WebElement passwordAlert(WebDriver driver)
+	{
+		return driver.findElement(By.id("passwordalert"));
+	}
+	public static WebElement firstNameAlert(WebDriver driver)
+	{
+		return driver.findElement(By.id("firstnamealert"));
+	}
+	public static WebElement lastNameAlert(WebDriver driver)
+	{
+		return driver.findElement(By.id("lastnamealert"));
+	}
+	public static WebElement contactNoAlert(WebDriver driver)
+	{
+		return driver.findElement(By.id("contactnoalert"));
+	}
+	public static WebElement roleAlert(WebDriver driver)
+	{
+		return driver.findElement(By.id("rolealert"));
+	}
+	public static WebElement departmentNameAlert(WebDriver driver)
+	{
+		return driver.findElement(By.id("departmentNamealert"));
+	}
+	public static WebElement securityQuestion1Alert(WebDriver driver)
+	{
+		return driver.findElement(By.id("securityQuestion1Alert"));
+	}
+	public static WebElement securityAnswer1Alert(WebDriver driver)
+	{
+		return driver.findElement(By.id("securityAnswer1Alert"));
+	}
+	public static WebElement securityQuestion2Alert(WebDriver driver)
+	{
+		return driver.findElement(By.id("securityQuestion2Alert"));
+	}
+	public static WebElement securityAnswer2Alert(WebDriver driver)
+	{
+		return driver.findElement(By.id("securityAnswer2Alert"));
+	}
+	public static WebElement securityQuestion3Alert(WebDriver driver)
+	{
+		return driver.findElement(By.id("securityQuestion3Alert"));
+	}
+	public static WebElement securityAnswer3Alert(WebDriver driver)
+	{
+		return driver.findElement(By.id("securityAnswer3Alert"));
+	}
+	
 	public void RegisterAsStudent(WebDriver driver)
 	{
 		RegisterPage.Email(driver).sendKeys("");

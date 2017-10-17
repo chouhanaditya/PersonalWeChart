@@ -1,26 +1,321 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="6" ignored="0" total="16" passed="10">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="776" started-at="2017-09-30T21:33:12Z" finished-at="2017-09-30T21:33:13Z">
+  <suite name="Default suite" duration-ms="49146" started-at="2017-10-13T04:11:54Z" finished-at="2017-10-13T04:12:43Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="776" started-at="2017-09-30T21:33:12Z" finished-at="2017-09-30T21:33:13Z">
-      <class name="Tests.LoginTests">
-        <test-method status="FAIL" signature="DataDrivenTests()[pri:0, instance:Tests.LoginTests@f78a47e]" name="DataDrivenTests" duration-ms="760" started-at="2017-09-30T16:33:12Z" finished-at="2017-09-30T16:33:13Z">
-          <exception class="java.lang.NullPointerException">
+    <test name="Default test" duration-ms="49146" started-at="2017-10-13T04:11:54Z" finished-at="2017-10-13T04:12:43Z">
+      <class name="Tests.RegisterPageTesting">
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="6473" started-at="2017-10-12T23:11:55Z" data-provider="registration" finished-at="2017-10-12T23:12:02Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="3370" started-at="2017-10-12T23:12:02Z" data-provider="registration" finished-at="2017-10-12T23:12:05Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[astril@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[astril]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[astril]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[astril]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[quadros]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="3341" started-at="2017-10-12T23:12:05Z" data-provider="registration" finished-at="2017-10-12T23:12:08Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[rolen@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[rolen]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[rolen]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[rolen]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[quadros]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="FAIL" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2589" started-at="2017-10-12T23:12:08Z" data-provider="registration" finished-at="2017-10-12T23:12:11Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[test1@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[tu]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[tu]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[quadros]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[null value in entry: url=null]]>
+              <![CDATA[Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: null value in entry: url=null
-	at com.google.common.collect.CollectPreconditions.checkEntryNotNull(CollectPreconditions.java:34)
-	at com.google.common.collect.SingletonImmutableBiMap.<init>(SingletonImmutableBiMap.java:42)
-	at com.google.common.collect.ImmutableBiMap.of(ImmutableBiMap.java:73)
-	at com.google.common.collect.ImmutableMap.of(ImmutableMap.java:123)
-	at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:370)
-	at Repos.BasePage.GoToPageUrl(BasePage.java:13)
-	at Tests.LoginTests.DataDrivenTests(LoginTests.java:41)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at Tests.RegisterPageTesting.checkAlert(RegisterPageTesting.java:181)
+	at Tests.RegisterPageTesting.AssignValues(RegisterPageTesting.java:111)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -48,11 +343,1163 @@
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- DataDrivenTests -->
-      </class> <!-- Tests.LoginTests -->
+        </test-method> <!-- AssignValues -->
+        <test-method status="FAIL" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2114" started-at="2017-10-12T23:12:11Z" data-provider="registration" finished-at="2017-10-12T23:12:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[2]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at Tests.RegisterPageTesting.checkAlert(RegisterPageTesting.java:181)
+	at Tests.RegisterPageTesting.AssignValues(RegisterPageTesting.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="FAIL" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2220" started-at="2017-10-12T23:12:13Z" data-provider="registration" finished-at="2017-10-12T23:12:15Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at Tests.RegisterPageTesting.checkAlert(RegisterPageTesting.java:181)
+	at Tests.RegisterPageTesting.AssignValues(RegisterPageTesting.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="FAIL" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2201" started-at="2017-10-12T23:12:15Z" data-provider="registration" finished-at="2017-10-12T23:12:17Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at Tests.RegisterPageTesting.checkAlert(RegisterPageTesting.java:181)
+	at Tests.RegisterPageTesting.AssignValues(RegisterPageTesting.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="FAIL" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2105" started-at="2017-10-12T23:12:17Z" data-provider="registration" finished-at="2017-10-12T23:12:20Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at Tests.RegisterPageTesting.checkAlert(RegisterPageTesting.java:181)
+	at Tests.RegisterPageTesting.AssignValues(RegisterPageTesting.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="FAIL" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2173" started-at="2017-10-12T23:12:20Z" data-provider="registration" finished-at="2017-10-12T23:12:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[6]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <exception class="org.openqa.selenium.NoSuchElementException">
+            <message>
+              <![CDATA[Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.NoSuchElementException: Unable to locate element: #emailidalert
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: 'unknown', revision: 'unknown', time: 'unknown'
+System info: host: 'DESKTOP-9SJ2URU', ip: '192.168.0.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_144'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{moz:profile=C:\Users\Harsha Verma\AppData\Local\Temp\rust_mozprofile.lrXAHbXAFlgD, rotatable=false, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, moz:headless=false, platform=XP, specificationLevel=0, moz:accessibilityChecks=false, acceptInsecureCerts=false, browserVersion=56.0, platformVersion=10.0, moz:processID=16064, browserName=firefox, javascriptEnabled=true, platformName=XP}]
+Session ID: afc83086-7d8a-47ad-8b88-3dd049692b1b
+*** Element info: {Using=id, value=emailidalert}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:185)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:120)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:164)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:82)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:646)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:416)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:462)
+	at org.openqa.selenium.By$ById.findElement(By.java:218)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:408)
+	at Tests.RegisterPageTesting.checkAlert(RegisterPageTesting.java:181)
+	at Tests.RegisterPageTesting.AssignValues(RegisterPageTesting.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:108)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:669)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:877)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1201)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:776)
+	at org.testng.TestRunner.run(TestRunner.java:634)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:425)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:420)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:385)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:334)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1318)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1243)
+	at org.testng.TestNG.runSuites(TestNG.java:1161)
+	at org.testng.TestNG.run(TestNG.java:1129)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2978" started-at="2017-10-12T23:12:22Z" data-provider="registration" finished-at="2017-10-12T23:12:25Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[7]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2487" started-at="2017-10-12T23:12:25Z" data-provider="registration" finished-at="2017-10-12T23:12:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2873" started-at="2017-10-12T23:12:27Z" data-provider="registration" finished-at="2017-10-12T23:12:30Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="2976" started-at="2017-10-12T23:12:30Z" data-provider="registration" finished-at="2017-10-12T23:12:33Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="3163" started-at="2017-10-12T23:12:33Z" data-provider="registration" finished-at="2017-10-12T23:12:36Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[1]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="3302" started-at="2017-10-12T23:12:36Z" data-provider="registration" finished-at="2017-10-12T23:12:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[4]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="AssignValues(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="AssignValues" duration-ms="3084" started-at="2017-10-12T23:12:39Z" data-provider="registration" finished-at="2017-10-12T23:12:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[shanshan@unomaha.edu]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[shanshan]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[test]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[4021110000]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[thisone]]>
+              </value>
+            </param>
+            <param index="8">
+              <value>
+                <![CDATA[3]]>
+              </value>
+            </param>
+            <param index="9">
+              <value>
+                <![CDATA[thatone]]>
+              </value>
+            </param>
+            <param index="10">
+              <value>
+                <![CDATA[5]]>
+              </value>
+            </param>
+            <param index="11">
+              <value>
+                <![CDATA[forever]]>
+              </value>
+            </param>
+            <param index="12">
+              <value is-null="true"/>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AssignValues -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:Tests.RegisterPageTesting@2eae8e6e]" name="closeBrowser" is-config="true" duration-ms="328" started-at="2017-10-12T23:12:43Z" finished-at="2017-10-12T23:12:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- Tests.RegisterPageTesting -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
