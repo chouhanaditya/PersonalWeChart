@@ -34,7 +34,7 @@ class CreateDocControlTable extends Migration
             $table->timestamps();
         });
 
-	
+
         //Adding foreign key constraint with navigation table
         Schema::table('doc_control', function (Blueprint $table) {
             $table->foreign('navigation_id')->references('navigation_id')->on('navigation');
@@ -50,8 +50,8 @@ class CreateDocControlTable extends Migration
             $table->foreign('freetext_value_type_id')->references('freetext_value_type_id')->on('freetext_value_type');
         });
 
-		
-/*Demographics has been removed as part of the active record		
+
+/*Demographics has been removed as part of the active record
 		//Inserting record for demographic-gender
         DB::table('doc_control')->insert(
             array(
@@ -61,7 +61,7 @@ class CreateDocControlTable extends Migration
                 'created_by' => 1
                 )
             );
-			
+
 		//Inserting record for demographic-age
         DB::table('doc_control')->insert(
             array(
@@ -72,7 +72,7 @@ class CreateDocControlTable extends Migration
                 'created_by' => 1
                 )
             );
-			
+
 		//Inserting record for demographic-height
         DB::table('doc_control')->insert(
             array(
@@ -83,7 +83,7 @@ class CreateDocControlTable extends Migration
                 'created_by' => 1
                 )
             );
-			
+
 		//Inserting record for demographic-weight
         DB::table('doc_control')->insert(
             array(
@@ -95,7 +95,7 @@ class CreateDocControlTable extends Migration
                 )
             );
 */
-		
+
 		//Insert records for History of Present Illness
 		DB::table('doc_control')->insert (
 			array (
@@ -106,7 +106,7 @@ class CreateDocControlTable extends Migration
 				'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 1,   		//History of Present Illness
@@ -116,7 +116,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		//Insert records for Personal History
 		DB::table('doc_control')->insert (
 			array (
@@ -128,31 +128,8 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
-		//Insert records for Personal History
-		DB::table('doc_control')->insert (
-			array (
-			'navigation_id' => 3,   		//Personal History
-			'label' => 'Diagnosis History',
-			'doc_control_type_id' => 5,  	//Search bar
-//			'doc_control_type_id' => 4,  	//Dropdown
-			'freetext_value_type_id' => 3,  //character
-			'created_by' => 1				//admin
-			)
-		);
-		
-		//Insert records for Personal History
-		DB::table('doc_control')->insert (
-			array (
-			'navigation_id' => 3,   		//Personal History
-			'label' => 'Diagnosis History',
-			'doc_control_type_id' => 5,  	//Search bar
-//			'doc_control_type_id' => 4,  	//Dropdown
-			'freetext_value_type_id' => 3,  //character
-			'created_by' => 1				//admin
-			)
-		);
-		
+
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 3,   		//Personal History
@@ -162,8 +139,8 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
-		
+
+
 		//Insert records for Family History
 		DB::table('doc_control')->insert (
 			array (
@@ -177,7 +154,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		//Insert records for Family History
 		DB::table('doc_control')->insert (
 			array (
@@ -191,7 +168,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		//Insert records for Family History
 		DB::table('doc_control')->insert (
 			array (
@@ -203,7 +180,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 4,   		//Family History
@@ -213,8 +190,8 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
-		
+
+
 		//Insert records for Surgical History
 		DB::table('doc_control')->insert (
 			array (
@@ -226,7 +203,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 5,   		//Surgical History
@@ -236,8 +213,8 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
-		
+
+
 		//Insert records for Social History
 		DB::table('doc_control')->insert (
 			array (
@@ -247,7 +224,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 6,   		//Social History
@@ -256,7 +233,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 6,   		//Social History
@@ -265,7 +242,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 6,   		//Social History
@@ -274,7 +251,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 6,   		//Social History
@@ -296,7 +273,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 7,   		//Medications
@@ -305,7 +282,7 @@ class CreateDocControlTable extends Migration
 			'freetext_value_type_id' => 3,  //character
 			'created_by' => 1				//admin
 			)
-		);	
+		);
 
 		//Insert records for Vital Signs
 		DB::table('doc_control')->insert (
@@ -318,7 +295,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 8,   		//Vital Signs
@@ -329,7 +306,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 8,   		//Vital Signs
@@ -340,7 +317,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 8,   		//Vital Signs
@@ -351,7 +328,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 8,   		//Vital Signs
@@ -362,29 +339,30 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
-		DB::table('doc_control')->insert (
-			array (
-			'navigation_id' => 8,   		//Vital Signs
-			'label' => 'Weight (Wt) (Kg)',
-			'doc_control_type_id' => 5,  	//Search bar
-//			'doc_control_type_id' => 4,  	//Dropdown
-			'freetext_value_type_id' => 3,  //character
-			'created_by' => 1				//admin
-			)
-		);
-		
-		DB::table('doc_control')->insert (
-			array (
-			'navigation_id' => 8,   		//Vital Signs
-			'label' => 'Height (Ht) (Cm)',
-			'doc_control_type_id' => 5,  	//Search bar
-//			'doc_control_type_id' => 4,  	//Dropdown
-			'freetext_value_type_id' => 3,  //character
-			'created_by' => 1				//admin
-			)
-		);
-		
+
+//Removing height and weight from vitals as it is stored in patient table
+//		DB::table('doc_control')->insert (
+//			array (
+//			'navigation_id' => 8,   		//Vital Signs
+//			'label' => 'Weight (Wt) (Kg)',
+//			'doc_control_type_id' => 5,  	//Search bar
+////			'doc_control_type_id' => 4,  	//Dropdown
+//			'freetext_value_type_id' => 3,  //character
+//			'created_by' => 1				//admin
+//			)
+//		);
+//
+//		DB::table('doc_control')->insert (
+//			array (
+//			'navigation_id' => 8,   		//Vital Signs
+//			'label' => 'Height (Ht) (Cm)',
+//			'doc_control_type_id' => 5,  	//Search bar
+////			'doc_control_type_id' => 4,  	//Dropdown
+//			'freetext_value_type_id' => 3,  //character
+//			'created_by' => 1				//admin
+//			)
+//		);
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 8,   		//Vital Signs
@@ -395,7 +373,7 @@ class CreateDocControlTable extends Migration
 			'created_by' => 1				//admin
 			)
 		);
-		
+
 		DB::table('doc_control')->insert (
 			array (
 			'navigation_id' => 8,   		//Vital Signs
@@ -404,8 +382,391 @@ class CreateDocControlTable extends Migration
 			'freetext_value_type_id' => 3,  //character
 			'created_by' => 1				//admin
 			)
-		);			
-		
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 10,   		//Constitution
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 10,   		//Constitution
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 11,   		//HENT
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 11,   		//HENT
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 12,   		//Eyes
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 12,   		//Eyes
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 13,   		//Respiratory
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 13,   		//Respiratory
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 14,   		//Cardiovascular
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 14,   		//Cardiovascular
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 15,   		//Musculoskeletal
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 15,   		//Musculoskeletal
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 16,   		//Integumentary
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 16,   		//Integumentary
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 17,   		//Neurological
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 17,   		//Neurological
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 18,   		//Psychological
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 18,   		//Psychological
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 20,   		//Constitution
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 20,   		//Constitution
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 21,   		//HENT
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 21,   		//HENT
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 22,   		//Eyes
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 22,   		//Eyes
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 23,   		//Respiratory
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 23,   		//Respiratory
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 24,   		//Cardiovascular
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 24,   		//Cardiovascular
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 25,   		//Musculoskeletal
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 25,   		//Musculoskeletal
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 26,   		//Integumentary
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 26,   		//Integumentary
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 27,   		//Neurological
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 27,   		//Neurological
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 28,   		//Psychological
+			'label' => 'Symptoms',
+			'doc_control_type_id' => 2,  	//Checkbox
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 28,   		//Psychological
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 31,   		//MDM/Plan
+			'label' => 'Plan',
+			'doc_control_type_id' => 3,  	//Checkbox
+			'freetext_value_type_id' => 3,	//character
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 31,   		//MDM/Plan
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 32,   		//Disposition
+			'label' => 'Disposition',
+			'doc_control_type_id' => 1,  	//Radio
+			'created_by' => 1				//admin
+			)
+		);
+
+		DB::table('doc_control')->insert (
+			array (
+			'navigation_id' => 32,   		//Disposition
+			'label' => 'Comments',
+			'doc_control_type_id' => 3,  	//Freeform text
+			'freetext_value_type_id' => 3,  //character
+			'created_by' => 1				//admin
+			)
+		);
+
+
     }
 
     /**
