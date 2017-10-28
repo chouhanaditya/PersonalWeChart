@@ -10,18 +10,21 @@ use Illuminate\Http\Request;
 use App\Http\Requests;
 use Auth;
 use App\User;
-use Illuminate\Support\Facades\DB;
 
 class EditProfileController extends Controller
 {
-	function getEditProfile()
+    public function __construct() {
+
+        $this->middleware('auth');
+
+    }
+    public function getEditProfile()
 	{
 		try {
 			$email=Auth::user()->email;
 			$user = User::where('email', $email)->first();
-			$role = $user->role;
             $Profilesubmitted='';
-			return view('auth/editprofile',compact('Profilesubmitted','user', 'role'));
+			return view('auth/editprofile',compact('Profilesubmitted','user'));
 		}
 		catch (Exception $e)
 		{
@@ -34,7 +37,11 @@ class EditProfileController extends Controller
      */
     public function postEditProfile(Request $request)
 	{
+
 			try {
+                $this->validate($request, array(
+                    'contactno' => 'regex:/[0-9]{10}/'
+                ));
                 $email = Auth::user()->email;
                 $user = User::where('email', $email)->first();
                 $user->update($request->all());
@@ -44,8 +51,6 @@ class EditProfileController extends Controller
             catch (\Exception $e)
             {
                 return view ('errors/503');
-
             }
-
 	}
 }
