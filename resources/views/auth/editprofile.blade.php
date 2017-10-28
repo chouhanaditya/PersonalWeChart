@@ -1,14 +1,14 @@
-<!--
- Developer - Varun Parihar
- Date - 09/23/2017
- Description - View for Edit Profile functionality.
--->
+  <!--
+   Developer - Varun Parihar
+   Date - 09/23/2017
+   Description - View for Edit Profile functionality.
+   10/27/2017 - Added code to handle change password fuctionality
+  -->
 @extends('layouts.app')
 @section('content')
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-
 
 
   <div class="container">
@@ -49,7 +49,6 @@
           </div>
         @endif
         <div class="panel-body">
-
           <form class="form-horizontal" method="POST" action="{{ url('EditProfile') }}">
             {{ csrf_field() }}
             <div class="form-group">
@@ -64,34 +63,75 @@
               <label for="departmentName" class="col-md-4 control-label">Department</label>
               <div class="col-md-6">
 
-                <input id="departmentName" type="departmentName" class="form-control" name="departmentName" value="<?php echo ($user['departmentName']); ?>" >
+                <input id="departmentName" type="text" class="form-control" name="departmentName" value="<?php echo ($user['departmentName']); ?>" >
               </div>
             </div>
             <div class="form-group">
               <label for="firstname" class="col-md-4 control-label">First Name</label>
               <div class="col-md-6">
 
-                <input id="firstname" type="firstname" class="form-control" name="firstname" value="<?php echo ($user['firstname']); ?>">
+                <input id="firstname" type="text" class="form-control" name="firstname" value="<?php echo ($user['firstname']); ?>">
               </div>
             </div>
             <div class="form-group">
               <label for="lastname" class="col-md-4 control-label">Last Name</label>
               <div class="col-md-6">
 
-                <input id="lastname" type="lastname" class="form-control" name="lastname" value="<?php echo ($user['lastname']); ?>">
+                <input id="lastname" type="text" class="form-control" name="lastname" value="<?php echo ($user['lastname']); ?>">
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-group{{ $errors->has('contactno') ? ' has-error' : '' }}">
               <label for="contactno" class="col-md-4 control-label">Contact No.</label>
               <div class="col-md-6">
 
-                <input id="contactno" type="contactno" class="form-control" name="contactno" value="<?php echo ($user['contactno']); ?>">
+                <input id="contactno" type="text" class="form-control" name="contactno" value="<?php echo ($user['contactno']); ?>">
+                @if ($errors->has('contactno'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('contactno') }}</strong>
+                  </span>
+                @endif
               </div>
             </div>
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
                 <p> <strong>Note:</strong> 10-digit US number</p>
+              </div>
+            </div>
+            <div class="form-group{{ $errors->has('old') ? ' has-error' : '' }}">
+              <label for="password" class="col-md-4 control-label">Old Password</label>
+
+              <div class="col-md-6">
+                <input id="password_old" type="password" class="form-control" name="old">
+
+                @if ($errors->has('old'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('old') }}</strong>
+                  </span>
+                @endif
+              </div>
+            </div>
+
+            <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
+              <label for="password" class="col-md-4 control-label">Password</label>
+              <div class="col-md-6">
+                <input id="password_new" type="password" class="form-control" name="password">
+                @if ($errors->has('password'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('password') }}</strong>
+                  </span>
+                @endif
+              </div>
+            </div>
+            <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
+              <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+              <div class="col-md-6">
+                <input id="password_new_confirm" type="password" class="form-control" name="password_confirmation">
+                @if ($errors->has('password_confirmation'))
+                  <span class="help-block">
+                    <strong>{{ $errors->first('password_confirmation') }}</strong>
+                  </span>
+                @endif
               </div>
             </div>
             <div class="form-group">
