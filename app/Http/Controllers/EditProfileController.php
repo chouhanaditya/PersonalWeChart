@@ -13,11 +13,6 @@ use App\User;
 
 class EditProfileController extends Controller
 {
-    public function __construct() {
-
-        $this->middleware('auth');
-
-    }
     public function getEditProfile()
 	{
 		try {
@@ -39,9 +34,6 @@ class EditProfileController extends Controller
 	{
 
 			try {
-                $this->validate($request, array(
-                    'contactno' => 'regex:/[0-9]{10}/'
-                ));
                 $email = Auth::user()->email;
                 $user = User::where('email', $email)->first();
                 $user->update($request->all());
