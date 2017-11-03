@@ -70,7 +70,8 @@
                                         </form>
                                     </li>
                                      <li>
-                                        <a href="{{ url('/EditProfile') }}">
+                                         {{--<input type=hidden id="user_id" name="user_id" value="{{ Auth::user()->id }}">--}}
+                                        <a href="{{ URL::route('EditProfile', Auth::user()->id) }}">
                                         <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
                                             Edit Profile
                                         </a>
