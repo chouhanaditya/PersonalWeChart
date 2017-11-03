@@ -32,6 +32,33 @@
           </div>
     @endif
     <br>
+        @if (Session::has('success'))
+            <div id="success" class="alert alert-success" style="">{!! Session::get('success') !!}</div>
+        @endif
+        @if (Session::has('empty_firstname'))
+            <div id="empty_firstname" class="alert alert-danger" style="">{!! Session::get('empty_firstname') !!}</div>
+        @endif
+        @if (Session::has('empty_lastname'))
+            <div id="empty_lastname" class="alert alert-danger" style="">{!! Session::get('empty_lastname') !!}</div>
+        @endif
+        @if (Session::has('invalid_contact'))
+            <div id="invalid_contact" class="alert alert-danger" style="">{!! Session::get('invalid_contact') !!}</div>
+        @endif
+        @if (Session::has('password_short'))
+            <div id="password_short" class="alert alert-danger" style="">{!! Session::get('password_short') !!}</div>
+        @endif
+        @if (Session::has('new_and_confirm_mismatch'))
+            <div id="new_and_confirm_mismatch" class="alert alert-danger" style="">{!! Session::get('new_and_confirm_mismatch') !!}</div>
+        @endif
+        @if (Session::has('new_password_empty'))
+            <div id="new_password_empty" class="alert alert-danger" style="">{!! Session::get('new_password_empty') !!}</div>
+        @endif
+        @if (Session::has('old_current_mismatch'))
+            <div id="old_current_mismatch" class="alert alert-danger" style="">{!! Session::get('old_current_mismatch') !!}</div>
+        @endif
+        @if (Session::has('old_blank'))
+            <div id="old_blank" class="alert alert-danger" style="">{!! Session::get('old_blank') !!}</div>
+        @endif
       <div class="panel panel-default">
 
         <div class="panel-heading" style="padding-bottom: 0;padding-top: 0">
@@ -48,13 +75,12 @@
           </div>
         @endif
         <div class="panel-body">
-          <form class="form-horizontal" method="POST" action="{{ url('EditProfile') }}">
+          <form id='formCheckPassword' class="form-horizontal" method="POST" action="{{ url('EditProfile') }}">
             {{ csrf_field() }}
               <input id="user_id" name="user_id" type="hidden" value="{{ $user->id }}">
             <div class="form-group">
               <label for="email" class="col-md-4 control-label">E-Mail Address</label>
               <div class="col-md-6">
-
                 <input id="email" type="email" class="form-control" name="email" value="<?php echo ($user['email']); ?>" readonly="true">
               </div>
             </div>
@@ -93,16 +119,6 @@
                 @endif
               </div>
             </div>
-              @if($erroredForm == 'Contact Number invalid')
-                  <div class="row">
-                      <div class="col-md-6 col-md-offset-4">
-                          <div class="alert alert-danger">
-                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                              <strong>Please provide valid 10 digit contact number.</strong>
-                          </div>
-                      </div>
-                  </div>
-              @endIf
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
                 <p> <strong>Note:</strong> 10-digit US number</p>
@@ -121,27 +137,6 @@
                 @endif
               </div>
             </div>
-              @if($erroredForm == 'Old & Current password do not match')
-                  <div class="row">
-                      <div class="col-md-6 col-md-offset-4">
-                          <div class="alert alert-danger">
-                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                              <strong>Old password does not match with current password.</strong>
-                          </div>
-                      </div>
-                  </div>
-              @endIf
-              @if($erroredForm == 'Old password blank')
-                  <div class="row">
-                      <div class="col-md-6 col-md-offset-4">
-                          <div class="alert alert-danger">
-                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                              <strong>Old password cannot be blank.</strong>
-                          </div>
-                      </div>
-                  </div>
-              @endIf
-
             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
               <label for="password" class="col-md-4 control-label">New Password</label>
               <div class="col-md-6">
@@ -153,26 +148,6 @@
                 @endif
               </div>
             </div>
-              @if($erroredForm == 'New password empty')
-                  <div class="row">
-                      <div class="col-md-6 col-md-offset-4">
-                          <div class="alert alert-danger">
-                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                              <strong>New password cannot be empty.</strong>
-                          </div>
-                      </div>
-                  </div>
-              @endIf
-              @if($erroredForm == 'Password short')
-                  <div class="row">
-                      <div class="col-md-6 col-md-offset-4">
-                          <div class="alert alert-danger">
-                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                              <strong>New password should be more than 6 characters.</strong>
-                          </div>
-                      </div>
-                  </div>
-              @endIf
             <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
               <label for="password-confirm" class="col-md-4 control-label">Confirm New Password</label>
               <div class="col-md-6">
@@ -184,16 +159,6 @@
                 @endif
               </div>
             </div>
-              @if($erroredForm == 'New & Confirm password do not match.')
-                  <div class="row">
-                      <div class="col-md-6 col-md-offset-4">
-                          <div class="alert alert-danger">
-                              <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                              <strong>Confirm password does not match with New password.</strong>
-                          </div>
-                      </div>
-                  </div>
-              @endIf
             <div class="form-group">
               <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
@@ -205,15 +170,6 @@
         </div>
 
       </div>
-        <!-- After user submits request -->
-        @if($Profilesubmitted == 'Yes')
-            <div class="row">
-                <div class="alert alert-success alert-dismissable">
-                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-                    Profile updated successfully.
-                </div>
-            </div>
-        @endif
     </div>
   </div>
   @endsection
