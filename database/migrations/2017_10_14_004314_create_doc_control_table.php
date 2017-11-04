@@ -399,6 +399,16 @@ class CreateDocControlTable extends Migration
         DB::table('doc_control')->insert (
             array (
                 'navigation_id' => 8,   		//Vital Signs
+                'label' => 'Oxygen Saturation',
+                'doc_control_type_id' => 5,  	//Freeform text
+                'freetext_value_type_id' => 3,  //character
+                'created_by' => 1				//admin
+            )
+        );
+
+        DB::table('doc_control')->insert (
+            array (
+                'navigation_id' => 8,   		//Vital Signs
                 'label' => 'Comments',
                 'doc_control_type_id' => 3,  	//Freeform text
                 'freetext_value_type_id' => 3,  //character
