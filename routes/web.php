@@ -77,7 +77,6 @@ Route::post('personal_history}', 'DocumentationController@post_personal_history'
 Route::post('surgical_history}', 'DocumentationController@post_surgical_history')->name('surgical_history');
 
 Route::get('/Medications/{id}', 'NavigationController@get_medications')->name('Medications');
-Route::get('/Vital_Signs/{id}', 'NavigationController@get_vital_signs')->name('Vital Signs');
 Route::get('/Review_of_System (ROS)/{id}', 'NavigationController@get_ROS')->name('Review of System (ROS)');
 Route::get('/Physical_Exam/{id}', 'NavigationController@get_physical_exams')->name('Physical Exam');
 Route::get('/Orders/{id}', 'NavigationController@get_orders')->name('Orders');
@@ -89,6 +88,10 @@ Route::get('/Disposition/{id}', 'NavigationController@get_disposition')->name('D
 Route::get('/InstructorHome', 'InstructorController@index');
 
 Route::get('/diagnosis/find', 'DocumentationController@find_diagnosis')->name('diagnosis_find');
+
+Route::get('/Vital_Signs/{id}', 'NavigationController@get_vital_signs')->name('Vital Signs');
+Route::post('post_vital_signs', 'DocumentationController@post_vital_signs');
+Route::post('delete_vital_signs/{ts}', 'DocumentationController@delete_vital_signs')->name('delete_vital_signs');
 
 
 
