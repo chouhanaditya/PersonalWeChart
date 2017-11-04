@@ -12,6 +12,22 @@ use Illuminate\Support\Facades\DB;
 
 use Illuminate\Http\Request;
 use App\patient;
+use App\active_record;
+
+class vital_signs
+{
+    public $timestamp;
+    public $BP_Systolic;
+    public $BP_Diastolic;
+    public $Heart_Rate;
+    public $Respiratory_Rate;
+    public $Temperature;
+    public $Weight;
+    public $Height;
+    public $Pain;
+    public $Oxygen_Saturation;
+    public $Comment;
+}
 
 class NavigationController extends Controller
 {
