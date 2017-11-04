@@ -12,6 +12,7 @@ use App\users_patient;
 use App\module_navigation;
 use App\navigation;
 use App\patient;
+use App\active_record;
 
 
 class DocumentationController extends Controller
@@ -226,4 +227,158 @@ class DocumentationController extends Controller
         }
 
     }
+    
+    public function post_vital_signs(Request $request)
+    {
+        $role='';
+        if(Auth::check()) {
+            $role = Auth::user()->role;
+        }         if($role == 'Student') {
+
+        try {
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '20';
+        $active_record['value'] = $request['BP_Systolic'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '21';
+        $active_record['value'] = $request['BP_Diastolic'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '22';
+        $active_record['value'] = $request['Heart_Rate'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '23';
+        $active_record['value'] = $request['Respiratory_Rate'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '24';
+        $active_record['value'] = $request['Temperature'] . " " . $request['temperature_unit'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '25';
+        $active_record['value'] = $request['Weight'] . " " . $request['weight_unit'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '26';
+        $active_record['value'] = $request['Height'] . " " . $request['height_unit'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '27';
+        $active_record['value'] = $request['Pain'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '28';
+        $active_record['value'] = $request['Oxygen_Saturation'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+        $active_record = new active_record();
+        $active_record['patient_id'] = $request['patient_id'];
+        $active_record['navigation_id'] = '8';
+        $active_record['doc_control_id'] = '29';
+        $active_record['value'] = $request['Comments'];
+        $active_record['created_by'] = $request['user_id'];
+        //$active_record['created_at'] = $request['timestamp'];
+        $active_record['updated_by'] = $request['user_id'];
+        $active_record->save();
+
+
+        return redirect()->route('Vital Signs',[$request['patient_id']]);
+
+            }
+            catch (\Exception $e)
+            {
+             return view('errors/503');
+            }
+            }
+             else {
+            return view('auth/login');
+            }
+    }
+
+    public function delete_vital_signs($ts, Request $request)
+    {
+        $role='';
+        if(Auth::check()) {
+            $role = Auth::user()->role;
+        }         if($role == 'Student') {
+
+        try {
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','20')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','21')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','22')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','23')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','24')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','25')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','26')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','27')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','28')->delete();
+        active_record::where('created_at',$ts)->where('navigation_id', '8')->where('doc_control_id','29')->delete();
+
+        return redirect()->route('Vital Signs',[$request['patient_id']]);
+        }
+        catch (\Exception $e)
+        {
+            return view('errors/503');
+        }
+        }
+        else {
+        return view('auth/login');
+            }
+    }
+
 }
