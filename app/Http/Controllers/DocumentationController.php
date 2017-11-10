@@ -189,6 +189,49 @@ class DocumentationController extends Controller
 
     }
 
+    public function post_MDM(Request$request){
+        $role='';
+        if(Auth::check()) {
+            $role = Auth::user()->role;
+        }
+
+        if($role == 'Student') {
+            try {
+                //Saving MDM
+                $MDM_record = active_record::where('patient_id', $request['patient_id'])
+                    ->where('navigation_id','31')
+                    ->where('doc_control_id','61')->get();
+
+                if(!count($MDM_record)>0)
+                {
+                    $active_record = new active_record();
+                    $active_record['patient_id'] = $request['patient_id'];
+                    $active_record['navigation_id'] = '31';
+                    $active_record['doc_control_id'] = '61';
+                    $active_record['value'] = $request['MDM'];
+                    $active_record['created_by'] = $request['user_id'];
+                    $active_record['updated_by'] = $request['user_id'];
+                    $active_record->save();
+                }
+                else {
+                    $active_record = active_record::where('active_record_id', $MDM_record[0]->active_record_id)->first();
+                    $active_record['value'] = $request['MDM'];
+                    $active_record->save();
+                }
+
+                //Now redirecting to page
+                return redirect()->route('MDM/Plan',[$request['patient_id']]);
+
+            } catch (\Exception $e) {
+                return view('errors/503');
+            }
+        }
+        else
+        {
+            return view('auth/not_authorized');
+        }
+    }
+
     public function post_results(Request $request)
     {
         $role='';
