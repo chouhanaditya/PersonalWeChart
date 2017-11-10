@@ -75,13 +75,13 @@
                         </div>
                         <br><br>
 
-                        <div class="row" style="overflow-x: auto;width: 775px" class="col-md-12">
+                        <div class="row" style="overflow-x: auto;width: 775px" class="col-md-12" id="table_child_vital_signs">
                             <form class="form-horizontal" method="POST" action="{{ url('post_vital_signs') }}" id="vitals_form">
                                 {{ csrf_field() }}
                                 <input id="patient_id" name="patient_id" type="hidden" value="{{ $patient->patient_id }}">
                                 <input type=hidden id="user_id" name="user_id" value="{{ Auth::user()->id }}">
                                 <!-- <input id="timestamp" name="timestamp" type="hidden"> -->
-                                <table class="table table-striped table-bordered table-hover" id="table_child_vital_signs" style="margin-top:10px; margin-left:15px;">
+                                <table class="table table-striped table-bordered table-hover" style="margin-top:10px; margin-left:15px;">
                                     <tr style="background: lightblue">
                                         <th>BP Systolic</th>
                                         <th>BP Diastolic</th>
@@ -148,6 +148,9 @@
                                     </tr>
 
                                 </table>
+                                <a href="#" title="" class="btn btn-primary" id="cancel_add_vital_signs" style="float: left; margin-left:15px;">
+                                    Cancel</a>
+                                <br>
                             </form>
                         </div>
                     </div>
@@ -179,6 +182,25 @@
                 inputsChanged = false;
             });
             window.onbeforeunload = unloadPage;           
+        });
+
+        $("#cancel_add_vital_signs").click(function(){
+            $('#table_child_vital_signs').hide();
+            $("#btn_add_vital_signs").show();
+
+            $('#BP_Diastolic').val('');
+            $('#BP_Systolic').val('');
+            $('#Heart_Rate').val('');
+            $('#Respiratory_Rate').val('');
+            $('#Temperature').val('');
+            $('#temperature_unit').val('');
+            $('#Height').val('');
+            $('#height_unit').val('');
+            $('#Weight').val('');
+            $('#weight_unit').val('');
+            $('#Pain').val('');
+            $('#Oxygen_Saturation').val('');
+            $('#Comments').val('');
         });
 
     </script>
