@@ -465,6 +465,10 @@ class NavigationController extends Controller
     public function get_MDM($id)
     {
         if(Auth::check()) {
+            $MDM = active_record::where('patient_id', $id)
+                ->where('navigation_id','31')
+                ->where('doc_control_id','61')->get();
+
             $patient = patient::where('patient_id', $id)->first();
             //Fetching all navs associated with this patient's module
             $navIds = module_navigation::where('module_id', $patient->module_id)->orderBy('navigation_id')->pluck('navigation_id');
@@ -478,7 +482,7 @@ class NavigationController extends Controller
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
 
-            return view('patient/general_patient', compact ('vital_signs_header','patient','navs'));
+            return view('patient/MDM', compact ('MDM','patient','navs','vital_signs_header'));
         }
         else
         {

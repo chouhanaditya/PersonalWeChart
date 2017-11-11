@@ -94,6 +94,8 @@ Route::get('/Results/{id}', 'NavigationController@get_results')->name('Results')
 Route::post('post_results}', 'DocumentationController@post_results')->name('post_results');
 
 Route::get('/MDM/{id}', 'NavigationController@get_MDM')->name('MDM/Plan');
+Route::post('MDM','DocumentationController@post_MDM')->name('post_MDM');
+
 Route::get('/Disposition/{id}', 'NavigationController@get_disposition')->name('Disposition');
 
 //Landing page for Instructor
