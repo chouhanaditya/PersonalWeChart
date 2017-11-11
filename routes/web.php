@@ -19,8 +19,8 @@ Auth::routes();
 Route::post('/SecurityQuestions', 'Auth\ForgotPasswordController@getSecurityQuestions');
 Route::post('/ResetPassword', 'Auth\ResetPasswordController@resetUserPassword');
 Route::post('/ChangePassword', 'Auth\ResetPasswordController@changePassword');
-Route::get('/User/EditProfile/{id}', 'UserController@getEditProfile')->name('EditProfile');
-Route::post('EditProfile', 'UserController@postEditProfile');
+Route::get('/User/{id}/EditProfile', 'UsersController@getEditProfile')->name('EditProfile');
+Route::post('EditProfile', 'UsersController@postEditProfile');
 
 //Admin Routes
 
