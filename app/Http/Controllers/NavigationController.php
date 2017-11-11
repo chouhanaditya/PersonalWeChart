@@ -568,4 +568,40 @@ class NavigationController extends Controller
 
         return $vital_signs_header;
     }
+
+    public function get_assignInstructor($id)
+    {
+        if(Auth::check()) {
+            //Log::info('varun');
+
+//            $medications = active_record::where('patient_id', $id)
+//                ->where('navigation_id','7')
+//                ->where('doc_control_id','16')->get();
+//
+//            $medication_comment = active_record::where('patient_id', $id)
+//                ->where('navigation_id','7')
+//                ->where('doc_control_id','17')->get();
+//
+//
+            $patient = patient::where('patient_id', $id)->first();
+            //Fetching all navs associated with this patient's module
+            $navIds = module_navigation::where('module_id', $patient->module_id)->orderBy('navigation_id')->pluck('navigation_id');
+
+            $navs = array();
+            //Now get nav names
+            foreach ($navIds as $nav_id) {
+                $nav = navigation::where('navigation_id', $nav_id)->get();
+                array_push($navs, $nav);
+            }
+
+            //Extracting vital signs for header
+            $vital_signs_header = $this->get_vital_signs_header($id);
+
+            return view('patient/assign_instructor', compact ('vital_signs_header','medications','medication_comment','patient','navs'));
+        }
+        else
+        {
+            return view('auth/not_authorized');
+        }
+    }
 }
