@@ -35,7 +35,17 @@
                             </li>
                         @endif
                     @endforeach
+
+                    <li class="list-group-item">
+                        @if(!count($disposition)> 0)
+                        <a href="" class="btn btn-primary" id="submit-button" style="margin:auto; text-align:center; display:block; width:100%;" disabled>Submit</a>
+                            @else
+                                <a href="" class="btn btn-primary" id="submit-button" style="margin:auto; text-align:center; display:block; width:100%;">Submit</a>
+                            @endif
+                    </li>
                 </ul>
+
+
             </div>
 
             {{--Documentation Panel--}}
@@ -60,5 +70,8 @@
 //        $('ul.list-group li.list-group-item').css('background','none');
 //        $(this).parent().css('background','red');
 //    });
+
+
+
     </script>
 @endsection

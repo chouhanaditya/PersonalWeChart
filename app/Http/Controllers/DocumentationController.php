@@ -8,7 +8,9 @@ use App\med_lookup_value;
 use App\imaging_orders_lookup_value;
 use App\lab_orders_lookup_value;
 use Illuminate\Support\Facades\Log;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Auth;
 use App\module;
 use App\User;
@@ -96,7 +98,24 @@ class DocumentationController extends Controller
 
         return \Response::json($formatted_lookups);
     }
+    public function find_instructor(Request $request)
+    {
+        $term = trim($request->q);
 
+        if (empty($term)) {
+            return \Response::json([]);
+        }
+
+        $lookups = User::where('role', 'Instructor')->where('firstname', 'LIKE', "%$term%")->orWhere('lastname', 'LIKE', "%$term%")->get();
+
+        $formatted_lookups = [];
+
+        foreach ($lookups as $lookup) {
+            $formatted_lookups[] = ['id' => $lookup->firstname. ' ' . $lookup->lastname, 'text' => $lookup->firstname. ' ' . $lookup->lastname ];
+        }
+
+        return \Response::json($formatted_lookups);
+    }
 
     public function post_Demographics(Request $request)
     {
@@ -915,5 +934,46 @@ class DocumentationController extends Controller
     else {
         return view('auth/not_authorized');
     }
+    }
+
+    public function post_assignInstructor(Request $request)
+    {
+        $role='';
+        $firstname='';
+        $lastname='';
+        if(Auth::check()) {
+            $role = Auth::user()->role;
+        }
+        if ($role == 'Student')
+        {
+            $student_id = Auth::user()->id;
+            $users_patient = users_patient::where('patient_id', $request['patient_id'])->where('user_id', Auth::user()->id)->first();
+            Log::info($request['patient_id'].$student_id);
+            DB::table('users_patient')->where('patient_id', $request['patient_id'])->where('user_id', Auth::user()->id)->update(['patient_record_status_id' => '2']);
+            $instructors = $request['search_instructors'];
+            foreach ((array)$instructors as $instructor)
+            {
+                $splitName = explode(' ', $instructor, 2);
+                $firstname = $splitName[0];
+                $lastname = $splitName[1];
+                $instructor_id = User::where('firstname', $firstname)->where('lastname', $lastname)->where('role', 'Instructor')->first();
+                $users_patient['patient_record_status_id'] = '2';
+                $users_patient['patient_id'] = $request['patient_id'];
+                $users_patient['user_id'] = $instructor_id['id'];
+                DB::table('users_patient')->insert([
+                    'patient_record_status_id' => '2',
+                    'patient_id' => $request['patient_id'],
+                    'user_id' => $instructor_id['id'],
+                    'created_by' => $student_id,
+                    'updated_by' => $student_id
+                ]);
+                //Log::info($instructor_ids);
+            }
+            return redirect()->route('student.home');
+        }
+        else
+        {
+            return view('auth/not_authorized');
+        }
     }
 }

@@ -12,7 +12,7 @@ use App\User;
 use Illuminate\Support\Facades\Hash;
 use Log;
 
-class UserController extends Controller
+class UsersController extends Controller
 {
 
     public function getEditProfile()

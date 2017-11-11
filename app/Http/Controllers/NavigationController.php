@@ -83,7 +83,12 @@ class NavigationController extends Controller
             $array2 = explode(' ', $weight, 2);
             $weight = $array2[0];
             $weight_unit = $array2[1];
-            return view('patient/demographics_patient', compact ('patient','navs','vital_signs_header','height','weight','weight_unit','height_unit'));
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
+            
+            return view('patient/demographics_patient', compact ('patient','navs','vital_signs_header','height','weight','weight_unit','height_unit','disposition'));
         }
         else
         {
@@ -112,7 +117,12 @@ class NavigationController extends Controller
 
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
-            return view('patient/HPI', compact ('HPI','patient','navs','vital_signs_header'));
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
+            
+            return view('patient/HPI', compact ('HPI','patient','navs','vital_signs_header','disposition'));
         }
         else
         {
@@ -235,8 +245,12 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/medical_history', compact ('vital_signs_header','patient','diagnosis_list_surgical_history','surgical_history_comment','diagnosis_list_personal_history','personal_history_comment','family_members_details','comment_family_history','is_new_entry_social_history','diagnosis_list_personal_history','navs','social_history_smoke_tobacco','social_history_non_smoke_tobacco','social_history_alcohol','social_history_sexual_activity','social_history_comment','social_history_smoke_tobacco_id','social_history_non_smoke_tobacco_id','social_history_alcohol_id','social_history_sexual_activity_id','social_history_comment_id'));
+            return view('patient/medical_history', compact ('vital_signs_header','patient','diagnosis_list_surgical_history','surgical_history_comment','diagnosis_list_personal_history','personal_history_comment','family_members_details','comment_family_history','is_new_entry_social_history','diagnosis_list_personal_history','navs','social_history_smoke_tobacco','social_history_non_smoke_tobacco','social_history_alcohol','social_history_sexual_activity','social_history_comment','social_history_smoke_tobacco_id','social_history_non_smoke_tobacco_id','social_history_alcohol_id','social_history_sexual_activity_id','social_history_comment_id','disposition'));
         }
         else
         {
@@ -269,8 +283,12 @@ class NavigationController extends Controller
 
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/medications', compact ('vital_signs_header','medications','medication_comment','patient','navs'));
+            return view('patient/medications', compact ('vital_signs_header','medications','medication_comment','patient','navs','disposition'));
         }
         else
         {
@@ -288,7 +306,7 @@ class NavigationController extends Controller
                 array_push($navs, $nav);
             }
             $timestamps = active_record::where('patient_id', $id)
-                ->where('navigation_id', '8')->distinct()->pluck('created_at');
+                ->where('navigation_id', '8')->distinct()->orderBy('created_at', 'desc')->pluck('created_at');
             $vital_sign_details = Array();
             foreach($timestamps as $ts)
             {
@@ -339,8 +357,12 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/vital_signs', compact('vital_signs_header','patient','navs','vital_sign_details'));
+            return view('patient/vital_signs', compact('vital_signs_header','patient','navs','vital_sign_details','disposition'));
         }
         else
         {
@@ -362,8 +384,12 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/general_patient', compact ('vital_signs_header','patient','navs'));
+            return view('patient/general_patient', compact ('vital_signs_header','patient','navs','disposition'));
         }
         else
         {
@@ -386,8 +412,12 @@ class NavigationController extends Controller
 
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/general_patient', compact ('vital_signs_header','patient','navs'));
+            return view('patient/general_patient', compact ('vital_signs_header','patient','navs','disposition'));
         }
         else
         {
@@ -422,8 +452,12 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/orders', compact ('vital_signs_header','patient','navs','labs','images','comment_order'));
+            return view('patient/orders', compact ('vital_signs_header','patient','navs','labs','images','comment_order','disposition'));
         }
         else
         {
@@ -455,8 +489,12 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/results', compact ('vital_signs_header','labs','images','results','patient','navs'));        }
+            return view('patient/results', compact ('vital_signs_header','labs','images','results','patient','navs','disposition'));        }
         else
         {
             return view('auth/not_authorized');
@@ -481,8 +519,16 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
+<<<<<<< HEAD
             return view('patient/MDM', compact ('MDM','patient','navs','vital_signs_header'));
+=======
+            return view('patient/MDM', compact ('MDM','patient','navs','vital_signs_header','disposition'));
+>>>>>>> 430be17d8a127e7e12731a27c148bfdf7e179c4a
         }
         else
         {
@@ -504,8 +550,12 @@ class NavigationController extends Controller
             }
             //Extracting vital signs for header
             $vital_signs_header = $this->get_vital_signs_header($id);
+            
+            //Extracting disposition to enable or disable the submit button
+            $disposition = active_record::where('patient_id', $id)
+                ->where('navigation_id', '32')->get();
 
-            return view('patient/general_patient', compact ('vital_signs_header','patient','navs'));
+            return view('patient/general_patient', compact ('vital_signs_header','patient','navs','disposition'));
         }
         else
         {
@@ -567,5 +617,41 @@ class NavigationController extends Controller
             ->pluck('value');
 
         return $vital_signs_header;
+    }
+
+    public function get_assignInstructor($id)
+    {
+        if(Auth::check()) {
+            //Log::info('varun');
+
+//            $medications = active_record::where('patient_id', $id)
+//                ->where('navigation_id','7')
+//                ->where('doc_control_id','16')->get();
+//
+//            $medication_comment = active_record::where('patient_id', $id)
+//                ->where('navigation_id','7')
+//                ->where('doc_control_id','17')->get();
+//
+//
+            $patient = patient::where('patient_id', $id)->first();
+            //Fetching all navs associated with this patient's module
+            $navIds = module_navigation::where('module_id', $patient->module_id)->orderBy('navigation_id')->pluck('navigation_id');
+
+            $navs = array();
+            //Now get nav names
+            foreach ($navIds as $nav_id) {
+                $nav = navigation::where('navigation_id', $nav_id)->get();
+                array_push($navs, $nav);
+            }
+
+            //Extracting vital signs for header
+            $vital_signs_header = $this->get_vital_signs_header($id);
+
+            return view('patient/assign_instructor', compact ('vital_signs_header','medications','medication_comment','patient','navs'));
+        }
+        else
+        {
+            return view('auth/not_authorized');
+        }
     }
 }
