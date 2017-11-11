@@ -98,6 +98,9 @@ Route::post('MDM','DocumentationController@post_MDM')->name('post_MDM');
 
 Route::get('/Disposition/{id}', 'NavigationController@get_disposition')->name('Disposition');
 
+Route::get('/{id}/AssignInstructor', 'NavigationController@get_assignInstructor')->name('AssignInstructor');
+Route::post('InstructorAssigned', 'DocumentationController@post_assignInstructor')->name('InstructorAssigned');
+
 //Landing page for Instructor
 Route::get('/InstructorHome', 'InstructorController@index');
 Route::get('/family_history', 'DocumentationController@post_new_family_member')->name('post_new_family_member');
@@ -107,6 +110,7 @@ Route::get('/diagnosis/find', 'DocumentationController@find_diagnosis')->name('d
 Route::get('/medications/find', 'DocumentationController@find_medications')->name('medications_find');
 Route::get('/orders_labs/find', 'DocumentationController@find_lab_orders')->name('orders_labs_find');
 Route::get('/orders_imaging/find', 'DocumentationController@find_imaging_orders')->name('orders_imaging_find');
+Route::get('/instructors/find', 'DocumentationController@find_instructor')->name('instructors_find');
 
 
 
