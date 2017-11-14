@@ -19,7 +19,7 @@ class users_patient extends Authenticatable
     ];
 
     public function patient() {
-        return $this->belongsTo('App\patient');
+        return $this->belongsTo('App\patient', 'patient_id');
     }
     public function users() {
         return $this->belongsTo('App\User');
