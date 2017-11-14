@@ -11,7 +11,6 @@ use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
-use Auth;
 use App\module;
 use App\User;
 use App\users_patient;
@@ -26,7 +25,7 @@ use App\doc_control;
 
 class DocumentationController extends Controller
 {
-    //Below four are autocomplete search methods
+    //Below five are autocomplete search methods
     public function find_diagnosis(Request $request)
     {
         $term = trim($request->q);
