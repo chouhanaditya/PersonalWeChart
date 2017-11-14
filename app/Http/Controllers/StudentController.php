@@ -48,17 +48,18 @@ class StudentController extends Controller
                 $saved_message = 'There are no saved patients associated with this student.';
             }
 
-            if($submitted_patients == null) {
+            if(!empty($submitted_patients)) {
                 foreach ($submitted_patients as $patient) {
+                    //Log::info($patient);
                     if ($patient->module) {
                         array_push($modules, $patient->module->module_name);
                     } else {
-                        $submitted_message = 'There are no saved patients associated with this student.';
+                        $submitted_message = 'There are no submitted patients associated with this student.';
                     }
                 }
             }
             else {
-                $submitted_message = 'There are no saved patients associated with this student.';
+                $submitted_message = 'There are no submitted patients associated with this student.';
             }
 
             $modules = array_unique($modules);
