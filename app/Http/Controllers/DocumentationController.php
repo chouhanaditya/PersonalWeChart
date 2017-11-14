@@ -947,7 +947,6 @@ class DocumentationController extends Controller
         {
             $student_id = Auth::user()->id;
             $users_patient = users_patient::where('patient_id', $request['patient_id'])->where('user_id', Auth::user()->id)->first();
-            Log::info($request['patient_id'].$student_id);
             DB::table('users_patient')->where('patient_id', $request['patient_id'])->where('user_id', Auth::user()->id)->update(['patient_record_status_id' => '2']);
             $instructors = $request['search_instructors'];
             foreach ((array)$instructors as $instructor)
@@ -966,7 +965,7 @@ class DocumentationController extends Controller
                     'created_by' => $student_id,
                     'updated_by' => $student_id
                 ]);
-                //Log::info($instructor_ids);
+                patient::where('patient_id', $request['patient_id'])->update(array('completed_flag' => true));
             }
             return redirect()->route('student.home');
         }
