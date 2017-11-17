@@ -105,7 +105,10 @@ class DocumentationController extends Controller
             return \Response::json([]);
         }
 
-        $lookups = User::where('role', 'Instructor')->where('firstname', 'LIKE', "%$term%")->orWhere('lastname', 'LIKE', "%$term%")->get();
+        $lookups = User::where('role', 'Instructor')->where(function ($q) use ($term)
+        {
+        $q->where('firstname', 'LIKE', "%$term%")->orWhere('lastname', 'LIKE', "%$term%");
+        })->get();
 
         $formatted_lookups = [];
 
