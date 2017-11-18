@@ -22,7 +22,8 @@ class CreateCsvDataTable extends Migration
             $table->string('medical_list');
             $table->timestamps();
         });
-
+		
+/*
         //Load tab-delimited file
         if (($handle = fopen ( public_path('med_dx_test.txt'), 'r' )) !== FALSE) {
             while ($data = fgetcsv ($handle, 1000, "\t"))  {
@@ -48,6 +49,10 @@ class CreateCsvDataTable extends Migration
                 ]);
         }
 
+*/		
+		
+		
+		
         //Load doc_lookup_value
 //		$select_relation = DB::table('csv_data')
 //			->join('lookup_value', 'csv_data.medical_list', '=', 'lookup_value.lookup_value')
@@ -69,9 +74,11 @@ class CreateCsvDataTable extends Migration
 
 
 
-
+/*
         //clear out staging table
         DB::table('csv_data')->truncate();
+
+
 
         //Load tab-delimited file for medications
         if (($handle = fopen ( public_path('med_list.txt'), 'r' )) !== FALSE) {
@@ -97,28 +104,10 @@ class CreateCsvDataTable extends Migration
                     'created_by'=>1
                 ]);
         }
-
-        //Load doc_lookup_value
-//		$select_relation = DB::table('csv_data')
-//			->join('lookup_value', 'csv_data.medical_list', '=', 'lookup_value.lookup_value')
-//			->join('doc_control', function($join)
-//			{
-//				$join->on('doc_control.doc_control_id', '=', DB::raw('16'));
-//			}) ->get(array('lookup_value_id', 'doc_control_id'));
-//
-//		foreach($select_relation as $data) {
-//			DB::table('doc_lookup_value')->insert(
-//				[
-//					'lookup_value_id'=>$data->lookup_value_id,
-//					'doc_control_id'=>$data->doc_control_id,
-//					'created_by'=>1
-//				]);
-//		}
+*/
 
 
-
-
-
+/*
         //clear out staging table
         DB::table('csv_data')->truncate();
 
@@ -146,28 +135,10 @@ class CreateCsvDataTable extends Migration
                     'created_by'=>1
                 ]);
         }
-
-        //Load doc_lookup_value
-//		$select_relation = DB::table('csv_data')
-//			->join('lookup_value', 'csv_data.medical_list', '=', 'lookup_value.lookup_value')
-//			->join('doc_control', function($join)
-//			{
-//				$join->on('doc_control.doc_control_id', '=', DB::raw('69'));
-//			}) ->get(array('lookup_value_id', 'doc_control_id'));
-//
-//		foreach($select_relation as $data) {
-//			DB::table('doc_lookup_value')->insert(
-//				[
-//					'lookup_value_id'=>$data->lookup_value_id,
-//					'doc_control_id'=>$data->doc_control_id,
-//					'created_by'=>1
-//				]);
-//		}
+*/
 
 
-
-
-
+/*
         //clear out staging table
         DB::table('csv_data')->truncate();
 
@@ -195,26 +166,7 @@ class CreateCsvDataTable extends Migration
                     'created_by'=>1
                 ]);
         }
-
-        //Load doc_lookup_value
-//		$select_relation = DB::table('csv_data')
-//			->join('lookup_value', 'csv_data.medical_list', '=', 'lookup_value.lookup_value')
-//			->join('doc_control', function($join)
-//			{
-//				$join->on('doc_control.doc_control_id', '=', DB::raw('70'));
-//			}) ->get(array('lookup_value_id', 'doc_control_id'));
-//
-//		foreach($select_relation as $data) {
-//			DB::table('doc_lookup_value')->insert(
-//				[
-//					'lookup_value_id'=>$data->lookup_value_id,
-//					'doc_control_id'=>$data->doc_control_id,
-//					'created_by'=>1
-//				]);
-//		}
-
-
-
+*/
 
 
     }
