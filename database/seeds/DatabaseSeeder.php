@@ -11,6 +11,11 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call([
+			med_lookup_valueTableSeeder::class,
+			diagnosis_lookup_valueTableSeeder::class,
+			imaging_orders_lookup_valueTableSeeder::class,
+			lab_orders_lookup_valueTableSeeder::class
+		]);
     }
 }
