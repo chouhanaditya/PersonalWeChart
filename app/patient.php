@@ -30,6 +30,10 @@ class patient extends Authenticatable
         return  $status_id[0]->patient_record_status_id;
     }
 
+    public function user() {
+        return $this->belongsTo('App\user', 'created_by', 'id');
+    }
+
     protected $table = 'patient';
     protected $primaryKey ='patient_id';
 }
