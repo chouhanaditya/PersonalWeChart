@@ -1943,7 +1943,8 @@ else {
                         'patient_id' => $request['patient_id'],
                         'user_id' => $instructor_id['id'],
                         'created_by' => $student_id,
-                        'updated_by' => $student_id
+                        'updated_by' => $student_id,
+                        'updated_at' => Carbon\Carbon::now()->format('Y-m-d')
                     ]);
                 }
                 patient::where('patient_id', $request['patient_id'])->update(array('completed_flag' => true));
