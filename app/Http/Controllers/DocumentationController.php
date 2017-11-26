@@ -1944,11 +1944,11 @@ else {
                         'user_id' => $instructor_id['id'],
                         'created_by' => $student_id,
                         'updated_by' => $student_id,
-                        'updated_at' => Carbon\Carbon::now()->format('Y-m-d')
+                        'updated_at' => Carbon\Carbon::now('CDT')
                     ]);
                 }
                 patient::where('patient_id', $request['patient_id'])->update(array('completed_flag' => true));
-                patient::where('patient_id', $request['patient_id'])->update(array('submitted_date' => Carbon\Carbon::now()->format('m-d-Y')));
+                patient::where('patient_id', $request['patient_id'])->update(array('submitted_date' => Carbon\Carbon::now('CDT')->format('m-d-Y')));
 
                 return redirect()->route('student.home');
             }
