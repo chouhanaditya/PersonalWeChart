@@ -52,7 +52,7 @@
                                                                 <td><p id="patientSex">{{$for_review_patient->patient->gender}}</p></td>
                                                                 <td><p id="visitDate">{{$for_review_patient->patient->visit_date}}</p></td>
                                                                 <td><p id="submittedBy">{{$for_review_patient->patient->user->firstname." ".$for_review_patient->patient->user->lastname}}</p></td>
-                                                                <td><p id="submittedOn">{{$for_review_patient->updated_at}}</p></td>
+                                                                <td><p id="submittedOn">{{Carbon\Carbon::parse($for_review_patient->updated_at)->format('Y-m-d')}}</p></td>
                                                                 <td style="text-align: left">
                                                                     <a href="" class="btn btn-primary" id="edit">View & Edit</a>
                                                                     <a class="btn btn-danger" id="delete"> Delete</a>
