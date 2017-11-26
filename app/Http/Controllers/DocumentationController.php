@@ -98,7 +98,7 @@ class DocumentationController extends Controller
         }
         $lookups = User::where('role', 'Instructor')->where(function ($q) use ($term)
         {
-        $q->where('firstname', 'LIKE', "%$term%")->orWhere('lastname', 'LIKE', "%$term%");
+        $q->where('firstname', 'LIKE', '%'.$term.'%')->orWhere('lastname', 'LIKE', '%'.$term.'%');
         })->get();
         $formatted_lookups = [];
         foreach ($lookups as $lookup) {
